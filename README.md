@@ -1,6 +1,6 @@
 # Flowcommerce 🛒
 
-A full-stack e-commerce platform built with React, TypeScript, Node.js, and PostgreSQL. Features include user authentication, product management, shopping cart, payment processing with Stripe, and an admin panel.
+A full-stack e-commerce platform built with React, TypeScript, Node.js, Express and PostgreSQL. Features include user authentication, product management, shopping cart, payment processing with Stripe, and an admin panel.
 
 ## ✨ Features
 
