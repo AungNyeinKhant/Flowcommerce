@@ -168,21 +168,6 @@ npm run seed
 
 **Note**: Make sure your Stripe API key is configured before running the seed script, as it creates Stripe products for each sample product.
 
-## 🐳 Docker Deployment
-
-### Backend Docker
-```bash
-cd backend
-docker build -t flowcommerce-backend .
-docker run -p 3000:3000 flowcommerce-backend
-```
-
-### Frontend Docker
-```bash
-cd frontend
-docker build -t flowcommerce-frontend .
-docker run -p 5173:5173 flowcommerce-frontend
-```
 
 ## 📁 Project Structure
 
