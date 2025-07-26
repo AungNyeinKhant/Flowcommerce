@@ -15,30 +15,30 @@ export const getCheckoutSession = async (
   }
 };
 
-export const getCheckoutItems = async (
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => {
-  try {
-    const lineItems = await stripe.checkout.sessions.listLineItems(
-      req.params.id
-    );
-    const items = await Promise.all(
-      lineItems.data.map(async (lineItem) => {
-        const product = await prisma.product.findUnique({
-          where: {
-            priceId: lineItem.price?.id,
-          },
-        });
-        return { productId: product?.id, quantity: lineItem.quantity };
-      })
-    );
-    res.status(200).json(items);
-  } catch (error) {
-    next({ message: "Unable to retrieve the checkout items", error });
-  }
-};
+// export const getCheckoutItems = async (
+//   req: Request,
+//   res: Response,
+//   next: NextFunction
+// ) => {
+//   try {
+//     const lineItems = await stripe.checkout.sessions.listLineItems(
+//       req.params.id
+//     );
+//     const items = await Promise.all(
+//       lineItems.data.map(async (lineItem) => {
+//         const product = await prisma.product.findUnique({
+//           where: {
+//             priceId: lineItem.price?.id,
+//           },
+//         });
+//         return { productId: product?.id, quantity: lineItem.quantity };
+//       })
+//     );
+//     res.status(200).json(items);
+//   } catch (error) {
+//     next({ message: "Unable to retrieve the checkout items", error });
+//   }
+// };
 
 export const createCheckoutSession = async (
   req: Request,

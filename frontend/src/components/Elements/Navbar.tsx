@@ -24,13 +24,16 @@ const Navbar = () => {
     };
 
     return (
-        <div className="bg-white px-2 xs:px-6 py-5 justify-between rounded-xl items-center my-4 drop-shadow-lg relative z-30">
+        <div className="bg-white/70  px-2 xs:px-6 py-5 justify-between rounded-xl items-center my-4 drop-shadow-lg relative z-30">
             <ul className="flex items-center text-sm justify-between">
                 <li className="font-bold text-dark ">
                 {/* w-40 h-20 */}
                     <Link to="/">
-                    Flowcommerce
-                    {/* <img src={logo} alt="Flowcommerce" className="w-full h-full object-contain" /> */}
+                        <span className="px-4 py-2 border-2 border-[#E0C14F] rounded-lg bg-white/50  shadow-md text-black font-extrabold text-lg hover:bg-blue-100 hover:text-black/70 transition-all duration-200">
+                            Flowcommerce
+                        </span>
+                    
+                    
                     </Link>
                 </li>
                 <div className="flex text-secondary text-lg items-center">
